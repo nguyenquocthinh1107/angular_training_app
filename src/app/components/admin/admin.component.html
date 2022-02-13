@@ -32,7 +32,10 @@
       <button mat-button>Theater</button>
       <button mat-button routerLink="/admin/user">User management</button>
     </mat-sidenav>
-    <mat-sidenav-content class="sidenav-content">
+    <mat-sidenav-content >
+      <div class="sidenav-content">
+        <router-outlet></router-outlet>
+      </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
