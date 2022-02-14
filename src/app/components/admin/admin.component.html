@@ -1,0 +1,41 @@
+<div>
+  <!-- Navigation bar -->
+  <mat-toolbar class="navbar-container">
+    <div class="logo">
+      <button mat-button>Cinema App</button>
+    </div>
+    <button class="navbar-icon-menu" mat-icon-button [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <!-- <mat-icon>password</mat-icon> -->
+        <span>Change password</span>
+      </button>
+      <button mat-menu-item>
+        <!-- <mat-icon>voicemail</mat-icon> -->
+        <span>Change language</span>
+      </button>
+      <button mat-menu-item>
+        <!-- <mat-icon>notifications_off</mat-icon> -->
+        <span>Settings</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+
+  <!-- Left sidebar menu -->
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened class="sidenav">
+      <button mat-button>Dashboard</button>
+      <button mat-button routerLink="/admin/movie">Movie</button>
+      <button mat-button routerLink="/admin/category">Category</button>
+      <button mat-button routerLink="/admin/user">User management</button>
+    </mat-sidenav>
+    <mat-sidenav-content >
+      <div class="sidenav-content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
