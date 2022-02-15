@@ -1,1 +1,37 @@
-<p>add-category works!</p>
+<div class="add-category-container">
+  <h1 mat-dialog-title>Add new Category</h1>
+  <div mat-dialog-content>
+    <form [formGroup]="addCategory" (ngSubmit)="handleSubmitAddCategory(addCategory)">
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Category name</mat-label>
+          <input matInput formControlName="category_name" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Detail</mat-label>
+          <input matInput formControlName="detail" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Price</mat-label>
+          <input matInput formControlName="price" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Date</mat-label>
+          <input matInput formControlName="date" />
+        </mat-form-field>
+      </div>
+      <div>
+        <div id="button-form-dialog" mat-dialog-actions>
+          <button id="cancel-button" mat-button mat-dialog-close>CANCEL</button>
+          <button id="submit-button" mat-button type="submit">SUBMIT</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -6,6 +6,8 @@ import { UserComponent } from './user/user.component';
 import { MaterialModule } from 'src/material.module';
 import { CategoryComponent } from './category/category.component';
 import { AddCategoryComponent } from './category/add-category/add-category.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DeleteCategoryComponent } from './category/delete-category/delete-category.component';
 
 
 
@@ -15,11 +17,13 @@ import { AddCategoryComponent } from './category/add-category/add-category.compo
         UserComponent,
         CategoryComponent,
         AddCategoryComponent,
+        DeleteCategoryComponent,
     ],
     imports: [
         MaterialModule,
         CommonModule,
         AdminRoutingModule,
+        ReactiveFormsModule,
     ],
     providers: [],
     bootstrap: []

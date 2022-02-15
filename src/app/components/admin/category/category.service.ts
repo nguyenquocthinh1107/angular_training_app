@@ -14,7 +14,13 @@ export class CategoryService {
 
   public getAllCategory(): Observable<Category[]> {
     return this.httpClient
-      .get<Category[]>(`${this.baseUrl}/category`) // get data
+      .get<Category[]>(`${this.baseUrl}/category`) // get data  
       .pipe(map((res) => res));
+  }
+  public addCategory(category: Category): Observable<void> {
+    return this.httpClient.post<void>(`${this.baseUrl}/category`, category);
+  }
+  public deleteCategory(id: number): Observable<void> {
+    return this.httpClient.delete<void>(`${this.baseUrl}/category/` + id);
   }
 }

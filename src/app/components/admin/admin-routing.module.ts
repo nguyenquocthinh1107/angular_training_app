@@ -16,12 +16,6 @@ const routes: Routes = [
       {
         path: 'category',
         component: CategoryComponent,
-        children: [
-          {
-            path: 'add',
-            component: AddCategoryComponent,
-          }
-        ]
       },
     ],
   },

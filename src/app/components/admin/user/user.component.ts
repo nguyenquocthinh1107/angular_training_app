@@ -3,8 +3,14 @@ import { AfterViewInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { UserManagementService } from './user.service';
-import { UserData } from './user';
+import { UserManagementService } from '../../../../services/user/user.service';
+
+export interface UserData {
+  acc_name: string;
+  username: string;
+  role: string;
+  date: string;
+}
 
 @Component({
   selector: 'app-user',

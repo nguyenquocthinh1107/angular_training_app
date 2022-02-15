@@ -1,5 +1,5 @@
-.add-category-container {
-    width: 500px;
+.delete-category-container {
+    width: 400px;
     h1 {
         text-align: center;
     }
@@ -13,7 +13,7 @@
     }
     #button-form-dialog {
         width: 270px;
-        float: right;
+        margin-left: 65px;
         #cancel-button {
             background-color: rgb(233, 233, 233);
         }

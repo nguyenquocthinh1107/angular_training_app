@@ -1,22 +1,88 @@
 {
-    "user": [
-      { "acc_name": "Nguyen Quoc Thinh", "username": "nqthinh", "role": "admin", "date": "11/07/2022" },
-      { "acc_name": "Nguyen Van A", "username": "vana", "role": "admin", "date": "11/07/2022" },
-      { "acc_name": "Nguyen Van B", "username": "vanb", "role": "user", "date": "14/07/2022" },
-      { "acc_name": "Nguyen Quoc Thinh", "username": "nqthinh", "role": "admin", "date": "11/07/2022" },
-      { "acc_name": "Nguyen Quoc Thinh", "username": "nqthinh", "role": "admin", "date": "11/07/2022" },
-      { "acc_name": "Nguyen Quoc Thinh", "username": "nqthinh", "role": "admin", "date": "11/07/2022" },
-      { "acc_name": "Nguyen Quoc Thinh", "username": "nqthinh", "role": "admin", "date": "11/07/2022" },
-      { "acc_name": "Nguyen Quoc Thinh", "username": "nqthinh", "role": "admin", "date": "11/07/2022" }
-    ],
-    "category": [
-        { "category_name": "Nguyen Quoc Thinh", "detail": "nqthinh", "price": "admin", "date": "11/07/2022" },
-        { "category_name": "Nguyen Quoc Thinh", "detail": "nqthinh", "price": "admin", "date": "11/07/2022" },
-        { "category_name": "Nguyen Quoc Thinh", "detail": "nqthinh", "price": "admin", "date": "11/07/2022" },
-        { "category_name": "Nguyen Quoc Thinh", "detail": "nqthinh", "price": "admin", "date": "11/07/2022" },
-        { "category_name": "Nguyen Quoc Thinh", "detail": "nqthinh", "price": "admin", "date": "11/07/2022" },
-        { "category_name": "Nguyen Quoc Thinh", "detail": "nqthinh", "price": "admin", "date": "11/07/2022" },
-        { "category_name": "Nguyen Quoc Thinh", "detail": "nqthinh", "price": "admin", "date": "11/07/2022" },
-        { "category_name": "Nguyen Quoc Thinh", "detail": "nqthinh", "price": "admin", "date": "11/07/2022" }
-      ]
-  }
+  "user": [
+    {
+      "acc_name": "Nguyen Quoc Thinh",
+      "username": "nqthinh",
+      "role": "admin",
+      "date": "11/07/2022"
+    },
+    {
+      "acc_name": "Nguyen Van A",
+      "username": "vana",
+      "role": "admin",
+      "date": "11/07/2022"
+    },
+    {
+      "acc_name": "Nguyen Van B",
+      "username": "vanb",
+      "role": "user",
+      "date": "14/07/2022"
+    },
+    {
+      "acc_name": "Nguyen Quoc Thinh",
+      "username": "nqthinh",
+      "role": "admin",
+      "date": "11/07/2022"
+    },
+    {
+      "acc_name": "Nguyen Quoc Thinh",
+      "username": "nqthinh",
+      "role": "admin",
+      "date": "11/07/2022"
+    },
+    {
+      "acc_name": "Nguyen Quoc Thinh",
+      "username": "nqthinh",
+      "role": "admin",
+      "date": "11/07/2022"
+    },
+    {
+      "acc_name": "Nguyen Quoc Thinh",
+      "username": "nqthinh",
+      "role": "admin",
+      "date": "11/07/2022"
+    },
+    {
+      "acc_name": "Nguyen Quoc Thinh",
+      "username": "nqthinh",
+      "role": "admin",
+      "date": "11/07/2022"
+    },
+    {
+      "acc_name": "Nguyen Quoc",
+      "username": "nqthinh",
+      "role": "admin",
+      "date": "11/07/2022"
+    }
+  ],
+  "category": [
+    {
+      "category_name": "a",
+      "detail": "a",
+      "price": "a",
+      "date": "a",
+      "id": 4
+    },
+    {
+      "category_name": "B",
+      "detail": "a",
+      "price": "a",
+      "date": "a",
+      "id": 5
+    },
+    {
+      "category_name": "C",
+      "detail": "a",
+      "price": "a",
+      "date": "a",
+      "id": 6
+    },
+    {
+      "category_name": "D",
+      "detail": "a",
+      "price": "a",
+      "date": "a",
+      "id": 7
+    }
+  ]
+}
