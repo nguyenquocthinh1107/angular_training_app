@@ -57,18 +57,25 @@
   ],
   "category": [
     {
-      "category_name": "th",
-      "detail": "t",
-      "price": "t",
-      "date": "t",
-      "id": 11
+      "category_name": "fds",
+      "detail": "f",
+      "price": "f",
+      "date": "fd",
+      "id": 13
     },
     {
-      "category_name": "dc",
-      "detail": "",
+      "category_name": "b",
+      "detail": "b",
+      "price": "b",
+      "date": "b",
+      "id": 14
+    },
+    {
+      "category_name": "da",
+      "detail": "da",
       "price": "",
       "date": "",
-      "id": 12
+      "id": 15
     }
   ]
 }

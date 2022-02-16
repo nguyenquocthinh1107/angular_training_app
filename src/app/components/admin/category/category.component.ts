@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { AfterViewInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
@@ -22,29 +21,41 @@ export interface Category {
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
-  styleUrls: ['./category.component.scss']
+  styleUrls: ['./category.component.scss'],
 })
 export class CategoryComponent implements AfterViewInit {
   category: Category[] = [];
-  displayedColumns: string[] = ['category_name', 'detail', 'price', 'date', 'action'];
+  displayedColumns: string[] = [
+    'category_name',
+    'detail',
+    'price',
+    'date',
+    'action',
+  ];
   dataSource: MatTableDataSource<Category>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private categoryService: CategoryService, public dialog: MatDialog) {
+  constructor(
+    private categoryService: CategoryService,
+    public dialog: MatDialog
+  ) {
     this.dataSource = new MatTableDataSource(this.category);
   }
-  category$: Observable<Category[]>
+  category$: Observable<Category[]>;
   ngOnInit() {
-    // this.categoryService.getAllCategory().subscribe((res) => {
-    //   this.dataSource.data = res;
-    //   console.log('Data recieve:', res)
-    // })
-    // this.category$ = this.categoryService.getAllCategory()
-    this.refesh()
+    this.categoryService.getAllCategory().subscribe((res) => {
+      this.dataSource.data = res;
+    });
+    console.log("OnInit called")
+    // this.category$ = this.categoryService.getAllCategory(
   }
-
+  refresh() {
+    this.categoryService.getAllCategory().subscribe((data: Category[]) => {
+      this.dataSource.data = data;
+    });
+  }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
@@ -58,26 +69,19 @@ export class CategoryComponent implements AfterViewInit {
       this.dataSource.paginator.firstPage();
     }
   }
-  //Auto refesh
-  refesh() {
-    this.categoryService.getAllCategory().subscribe((data: Category[]) => {
-      this.dataSource.data = data
-    })
-  }
   //Open Add dialog
   openAddDialog() {
-    this.dialog.open(AddCategoryComponent)
+    this.dialog.open(AddCategoryComponent);
   }
   //Open Delete dialog
   openDeleteDialog(id: number) {
     this.dialog.open(DeleteCategoryComponent, {
-      data: id
-    })
+      data: id,
+    });
   }
   openEditDialog(id: number) {
     this.dialog.open(EditCategoryComponent, {
-      data: id
-    })
+      data: id,
+    });
   }
 }
-

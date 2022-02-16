@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CategoryService } from '../category.service';
 import { Category } from '../category.component';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { NotifierService } from 'angular-notifier';
 
 @Component({
@@ -17,12 +17,12 @@ export class EditCategoryComponent implements OnInit {
     price: new FormControl(''),
     date: new FormControl(''),
   });
-  dataGetById: Category;
   private notifier: NotifierService;
   constructor(
     private categoryService: CategoryService,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    notifierService: NotifierService
+    notifierService: NotifierService,
+    private dialog : MatDialog
   ) {
     this.notifier = notifierService;
   }
@@ -47,6 +47,9 @@ export class EditCategoryComponent implements OnInit {
     this.categoryService.editCategory(this.data, dataEdit).subscribe((res) => {
       alert("Edit success")
       console.log(res);
+      // this.dialog.afterAllClosed(
+        
+      // )
     });
   }
 }
