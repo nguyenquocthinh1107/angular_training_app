@@ -8,6 +8,9 @@ import { CategoryComponent } from './category/category.component';
 import { AddCategoryComponent } from './category/add-category/add-category.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DeleteCategoryComponent } from './category/delete-category/delete-category.component';
+import { EditCategoryComponent } from './category/edit-category/edit-category.component';
+import { ProductComponent } from './product/product.component';
+import { NotifierModule } from 'angular-notifier';
 
 
 
@@ -18,12 +21,15 @@ import { DeleteCategoryComponent } from './category/delete-category/delete-categ
         CategoryComponent,
         AddCategoryComponent,
         DeleteCategoryComponent,
+        EditCategoryComponent,
+        ProductComponent,
     ],
     imports: [
         MaterialModule,
         CommonModule,
         AdminRoutingModule,
         ReactiveFormsModule,
+        NotifierModule
     ],
     providers: [],
     bootstrap: []

@@ -57,32 +57,18 @@
   ],
   "category": [
     {
-      "category_name": "a",
-      "detail": "a",
-      "price": "a",
-      "date": "a",
-      "id": 4
+      "category_name": "th",
+      "detail": "t",
+      "price": "t",
+      "date": "t",
+      "id": 11
     },
     {
-      "category_name": "B",
-      "detail": "a",
-      "price": "a",
-      "date": "a",
-      "id": 5
-    },
-    {
-      "category_name": "C",
-      "detail": "a",
-      "price": "a",
-      "date": "a",
-      "id": 6
-    },
-    {
-      "category_name": "D",
-      "detail": "a",
-      "price": "a",
-      "date": "a",
-      "id": 7
+      "category_name": "dc",
+      "detail": "",
+      "price": "",
+      "date": "",
+      "id": 12
     }
   ]
 }

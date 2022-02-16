@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CategoryService } from '../category.service';
-import { Category } from '../category';
-
+import { Category } from '../category.component';
+  
 @Component({
   selector: 'app-add-category',
   templateUrl: './add-category.component.html',
@@ -22,9 +22,8 @@ export class AddCategoryComponent implements OnInit {
   }
   handleSubmitAddCategory(form: FormGroup) {
     const data = form.value;
-    // data.id = randomInt(200)
-    console.log('DATA:', data);
     this.categoryService.addCategory(data).subscribe((res) => {
+      alert("Add new category success")
       console.log(res);
     });
   }

@@ -3,6 +3,6 @@
   <div mat-dialog-content></div>
   <div id="button-form-dialog" mat-dialog-actions>
     <button id="cancel-button" mat-button mat-dialog-close>CANCEL</button>
-    <button id="submit-button" mat-button type="submit" (click)="handleDeleteCategory()">YES</button>
+    <button id="submit-button" mat-button type="submit" [mat-dialog-close]="true" (click)="handleDeleteCategory()">YES</button>
   </div>
 </div>

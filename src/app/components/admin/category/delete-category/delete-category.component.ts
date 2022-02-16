@@ -14,10 +14,10 @@ export class DeleteCategoryComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log('DATA DELETE', this.data);
   }
   handleDeleteCategory() {
     this.categoryService.deleteCategory(this.data).subscribe((res) => {
+      alert("Delete success")
       console.log(res);
     });
   }
