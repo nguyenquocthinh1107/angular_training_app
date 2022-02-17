@@ -1,0 +1,44 @@
+/* Structure */
+.user_table_container {
+    margin: 0 auto;
+    width: 98%;
+  }
+  table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 18px;
+    width: 100%;
+  }
+  .demo-button-container {        
+      padding: 5px;
+      float: right;
+      .demo-button{
+          width: 200px;
+          font-size: 22px;
+          color: rgb(44, 170, 13);
+          display: block; 
+      }
+  }
+  .action-button-container {      
+    width: 35%;   
+    margin: 0 auto;
+    float: left;
+    .action-button{
+        width: 60px;
+        font-size: 15px;
+        margin-left: 2px;
+    }
+    .action-button.create {
+      color: rgb(0, 119, 255);
+    }
+    .action-button.delete {
+      color: rgb(253, 21, 21);
+    }
+  }
+  .action-col{
+    border: 1px solid black !important;
+  }
+  
+  

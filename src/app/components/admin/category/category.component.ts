@@ -3,18 +3,17 @@ import { AfterViewInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { CategoryService } from './category.service';
+import { CategoryService } from 'src/services/category/category.service';
 import { AddCategoryComponent } from './add-category/add-category.component';
 import { DeleteCategoryComponent } from './delete-category/delete-category.component';
 import { EditCategoryComponent } from './edit-category/edit-category.component';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
 
 export interface Category {
   id: number;
   category_name: string;
   detail: string;
-  price: string;
   date: string;
 }
 
@@ -28,7 +27,6 @@ export class CategoryComponent implements AfterViewInit {
   displayedColumns: string[] = [
     'category_name',
     'detail',
-    'price',
     'date',
     'action',
   ];
@@ -45,16 +43,11 @@ export class CategoryComponent implements AfterViewInit {
   }
   category$: Observable<Category[]>;
   ngOnInit() {
-    this.categoryService.getAllCategory().subscribe((res) => {
+    this.categoryService.actionGetAllCategory().subscribe((res) => {
       this.dataSource.data = res;
     });
     console.log("OnInit called")
     // this.category$ = this.categoryService.getAllCategory(
-  }
-  refresh() {
-    this.categoryService.getAllCategory().subscribe((data: Category[]) => {
-      this.dataSource.data = data;
-    });
   }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
@@ -71,17 +64,32 @@ export class CategoryComponent implements AfterViewInit {
   }
   //Open Add dialog
   openAddDialog() {
-    this.dialog.open(AddCategoryComponent);
+    let DialogRef = this.dialog.open(AddCategoryComponent);
+    DialogRef.afterClosed().subscribe(result => {
+      this.categoryService.actionGetAllCategory().subscribe((res) => {
+        this.dataSource.data = res;
+      });
+    })
   }
   //Open Delete dialog
   openDeleteDialog(id: number) {
-    this.dialog.open(DeleteCategoryComponent, {
+    let DialogRef = this.dialog.open(DeleteCategoryComponent, {
       data: id,
     });
+    DialogRef.afterClosed().subscribe(result => {
+      this.categoryService.actionGetAllCategory().subscribe((res) => {
+        this.dataSource.data = res;
+      });
+    })
   }
   openEditDialog(id: number) {
-    this.dialog.open(EditCategoryComponent, {
+    let DialogRef = this.dialog.open(EditCategoryComponent, {
       data: id,
     });
+    DialogRef.afterClosed().subscribe(result => {
+      this.categoryService.actionGetAllCategory().subscribe((res) => {
+        this.dataSource.data = res;
+      });
+    })
   }
 }

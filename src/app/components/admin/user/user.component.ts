@@ -5,7 +5,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { UserManagementService } from '../../../../services/user/user.service';
 
-export interface UserData {
+export interface User {
   acc_name: string;
   username: string;
   role: string;
@@ -18,10 +18,10 @@ export interface UserData {
   styleUrls: ['./user.component.scss'],
 })
 export class UserComponent implements AfterViewInit {
-  users: UserData[] = [];
+  users: User[] = [];
 
   displayedColumns: string[] = ['acc_name', 'username', 'role', 'date'];
-  dataSource: MatTableDataSource<UserData>;
+  dataSource: MatTableDataSource<User>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -31,7 +31,7 @@ export class UserComponent implements AfterViewInit {
   }
 
   ngOnInit() {
-    this.userManagementService.getAllUser().subscribe((res) => {
+    this.userManagementService.actionGetAllUser().subscribe((res) => {
       this.dataSource.data = res;
     })
   }

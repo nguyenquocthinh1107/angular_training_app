@@ -1,20 +1,16 @@
 import { Injectable } from '@angular/core';
-import { UserData } from '../../app/components/admin/user/user.component';
-import { HttpClient } from '@angular/common/http';
+import { User } from '../../app/components/admin/user/user.component';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { UserApi } from 'src/api/user/user.api';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserManagementService {
-  baseUrl: string = 'http://localhost:3000';
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private _userApi : UserApi) {}
 
-  public getAllUser(): Observable<UserData[]> {
-    return this.httpClient
-      .get<UserData[]>(`${this.baseUrl}/user`) // get data
-      .pipe(map((res) => res));
+  public actionGetAllUser(): Observable<User[]> {
+    return this._userApi.getAllUser()
   }
 }

@@ -57,25 +57,25 @@
   ],
   "category": [
     {
-      "category_name": "fds",
-      "detail": "f",
-      "price": "f",
-      "date": "fd",
-      "id": 13
+      "category_name": "T",
+      "detail": "A",
+      "date": "11",
+      "id": 2
     },
     {
-      "category_name": "b",
-      "detail": "b",
-      "price": "b",
-      "date": "b",
-      "id": 14
-    },
-    {
-      "category_name": "da",
-      "detail": "da",
-      "price": "",
+      "category_name": "d",
+      "detail": "",
       "date": "",
-      "id": 15
+      "id": 3
+    }
+  ],
+  "product": [
+    {
+      "product_name": "fdsf",
+      "category": "dad",
+      "detail": "fdsff",
+      "date": "sfdsf",
+      "id": 1
     }
   ]
 }

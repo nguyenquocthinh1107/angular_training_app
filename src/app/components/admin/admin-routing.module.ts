@@ -4,6 +4,7 @@ import { AdminComponent } from './admin.component';
 import { UserComponent } from './user/user.component';
 import { CategoryComponent } from './category/category.component';
 import { AddCategoryComponent } from './category/add-category/add-category.component';
+import { ProductComponent } from './product/product.component';
 const routes: Routes = [
   {
     path: '',
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'category',
         component: CategoryComponent,
+      },
+      {
+        path: 'product',
+        component: ProductComponent,
       },
     ],
   },

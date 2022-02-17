@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { CategoryService } from '../category.service';
+import { CategoryService } from 'src/services/category/category.service';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
@@ -16,7 +16,7 @@ export class DeleteCategoryComponent implements OnInit {
   ngOnInit(): void {
   }
   handleDeleteCategory() {
-    this.categoryService.deleteCategory(this.data).subscribe((res) => {
+    this.categoryService.actionDeleteCategory(this.data).subscribe((res) => {
       alert("Delete success")
       console.log(res);
     });
